@@ -1,0 +1,11 @@
+create database Db;
+use Db;
+create table Countries 
+(
+country_id int not null unique,
+country_name varchar(45),
+region_id int,
+constraint ck_country_name check (country_name in ('India','China','Italy')),
+primary key (country_id)
+);
+desc Countries;
