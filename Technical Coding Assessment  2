@@ -1,0 +1,25 @@
+# Validate Triangle and Rectangle
+from ast import literal_eval 
+l1=list(map(literal_eval,input().split()))
+l2=list(map(literal_eval,input().split()))
+# l1=[4,5,3]
+# l2=[1,2,1,2]
+class Figure():
+    def Check_Triangle(self,l):
+        if len(l)!=3 or 0 in l:
+            return 'Invalid Triangle'
+        a=sorted(l)
+        if a[0]+a[1]>a[2]:
+            return 'Valid Triangle'
+        else:
+            return 'Invalid Triangle'
+    def Check_Rectangle(self,l):
+        if len(l)!=4 or 0 in l:
+            return 'Invalid Rectangle'
+        if l[0]==l[2] and l[1]==l[3]:
+            return 'Valid Rectangle'
+        else:
+            return 'Invalid Rectangle'
+figure=Figure()
+print(figure.Check_Triangle(l1))
+print(figure.Check_Rectangle(l2))
