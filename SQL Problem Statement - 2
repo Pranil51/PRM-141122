@@ -1,0 +1,14 @@
+## 2- Write a SQL statement to create the duplicate of the countries table named country_new with all structure and data.
+Here in the following is the structure of the table countries.
+
+create database Db2;
+use Db2;
+create table countries
+(
+COUNTRY_ID  varchar(2) DEFAULT  'IN',
+COUNTRY_NAME varchar(40) DEFAULT 'India',
+REGION_ID decimal(10,0) DEFAULT 88,
+PRIMARY KEY (COUNTRY_ID)
+);
+CREATE TABLE new_countries LIKE countries;
+desc new_countries;
