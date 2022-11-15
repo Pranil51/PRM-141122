@@ -3,5 +3,4 @@ def sort2(l):
     return sorted(l,key= (lambda x: x[-2]))
 n=int(input('Enter No of elements'))
 l=input('Enter elements seperated by space').split()
-print(l)
-print(sort2(l)) 
+print(sort2(l))
