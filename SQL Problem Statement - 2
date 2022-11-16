@@ -5,7 +5,7 @@ create database Db2;
 use Db2;
 create table countries
 (
-COUNTRY_ID  varchar(2) DEFAULT  'IN',
+COUNTRY_ID  varchar(2) DEFAULT  'IN' UNIQUE,
 COUNTRY_NAME varchar(40) DEFAULT 'India',
 REGION_ID decimal(10,0) DEFAULT 88,
 PRIMARY KEY (COUNTRY_ID)
