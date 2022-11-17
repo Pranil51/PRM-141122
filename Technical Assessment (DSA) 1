@@ -1,0 +1,24 @@
+from ast import literal_eval
+class graph():
+    def __init__(self,l):
+        self.l=l
+    def Nodes_of(self,x):
+        n=[x]
+        for i in self.l:
+            if len(i)<2:
+                continue
+            if i[0]==x:
+                n.append(i[1])
+            if i[1]==x:
+                n.append(i[0])
+        return n
+adj_list=[]
+n=int(input('Enter Number of Edges in input adjacency list: '))
+for i in range(n):
+    a=list(map(literal_eval,input('Enter Edge Elements seperated by space: ').split()))
+    adj_list.append(a)
+x=literal_eval(input('Enter X Node:'))
+g=graph(adj_list)
+op=g.Nodes_of(x)
+for i in op:
+    print(i,end=' ')
