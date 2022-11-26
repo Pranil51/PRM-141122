@@ -1,0 +1,9 @@
+ip_l=map(literal_eval,input('Enter numbers seperated by space').split())
+l=sorted(ip_l,reverse=True)
+x=-1
+m=len(l)
+for i in range(m//2):
+    print(l[i],end=' ')
+    print(l[x-i],end=' ')
+if m%2!=0:
+    print(l[m//2])
